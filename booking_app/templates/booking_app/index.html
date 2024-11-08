@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'booking_app/style.css' %}">
+</head>
+<body>
+    <h1>Book a Table</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Reserve</button>
+    </form>
+    <a href="{% url 'menu' %}">View Menu</a>
+</body>
+</html>
